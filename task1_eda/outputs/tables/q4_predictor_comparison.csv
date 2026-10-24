@@ -1,0 +1,8 @@
+predictor,type,MAE (MW),RMSE (MW),MAPE (%),corr with target
+Operator day-ahead forecast,ref,315.956,453.473,1.094,0.995
+Last hour (lag 1),lag,1063.904,1429.639,3.781,0.951
+Mean of lag 24 and lag 168,lag,2196.231,3113.185,7.738,0.75
+Same hour yesterday (lag 24),lag,2451.115,3526.033,8.626,0.703
+Same hour last week (lag 168),lag,2616.182,3766.815,9.2,0.661
+24-hour moving average,ma,3409.636,4100.792,12.447,0.456
+7-day moving average,ma,3814.483,4435.683,13.851,0.252
