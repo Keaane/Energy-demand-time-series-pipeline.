@@ -1,0 +1,5 @@
+# Task 1
+task1_eda/outputs/processed/
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
