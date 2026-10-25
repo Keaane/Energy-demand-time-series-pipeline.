@@ -1,0 +1,6 @@
+predictor,MAE (MW)
+Hour-of-day profile,2394.4
+Profile shifted by 24-hour average,1789.2
+Profile shifted by 7-day average,2255.6
+Lag 1 plus the 24-hour shift,2412.0
+Lag 24 plus the 24-hour shift,3369.9
