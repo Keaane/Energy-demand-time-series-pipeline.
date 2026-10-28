@@ -1,0 +1,9 @@
+params,rank_test_score,cv_MAE_MW
+"{'n_estimators': 200, 'min_samples_leaf': 3, 'max_features': 1.0, 'max_depth': 25}",1,388.7
+"{'n_estimators': 100, 'min_samples_leaf': 3, 'max_features': 1.0, 'max_depth': 25}",2,389.3
+"{'n_estimators': 200, 'min_samples_leaf': 5, 'max_features': 1.0, 'max_depth': 20}",3,393.8
+"{'n_estimators': 200, 'min_samples_leaf': 10, 'max_features': 1.0, 'max_depth': 25}",4,410.5
+"{'n_estimators': 200, 'min_samples_leaf': 3, 'max_features': 0.5, 'max_depth': 20}",5,412.1
+"{'n_estimators': 100, 'min_samples_leaf': 3, 'max_features': 0.5, 'max_depth': 20}",6,415.6
+"{'n_estimators': 100, 'min_samples_leaf': 5, 'max_features': 0.5, 'max_depth': 25}",7,424.7
+"{'n_estimators': 100, 'min_samples_leaf': 10, 'max_features': 0.5, 'max_depth': 20}",8,453.4

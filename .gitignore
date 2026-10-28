@@ -3,3 +3,6 @@ task1_eda/outputs/processed/
 .ipynb_checkpoints/
 __pycache__/
 .DS_Store
+
+# Task 1C
+task1c_model/energy_weather_features.csv

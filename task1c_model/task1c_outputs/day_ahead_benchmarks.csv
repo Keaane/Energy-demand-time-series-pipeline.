@@ -1,0 +1,3 @@
+Benchmark,MAE (MW),RMSE (MW),MAPE (%)
+Same hour yesterday (lag 24),2519.16,3606.59,8.72
+Operator day-ahead forecast,269.8,389.29,0.93
