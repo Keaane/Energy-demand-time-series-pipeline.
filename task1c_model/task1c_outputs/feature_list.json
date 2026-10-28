@@ -1,0 +1,26 @@
+{
+  "features": [
+    "hour_sin",
+    "hour_cos",
+    "dayofweek",
+    "month",
+    "is_weekend",
+    "load_lag_1",
+    "load_lag_24",
+    "load_lag_168",
+    "load_ma_24",
+    "load_ma_168",
+    "temp_mean",
+    "heating_deg",
+    "cooling_deg"
+  ],
+  "target": "total load actual",
+  "horizon": "next hour",
+  "best_params": {
+    "n_estimators": 200,
+    "min_samples_leaf": 3,
+    "max_features": 1.0,
+    "max_depth": 25
+  },
+  "needs": "last 168 hourly loads, local calendar fields, mean temperature of the five cities"
+}
