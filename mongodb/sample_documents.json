@@ -1,0 +1,118 @@
+[
+  {
+    "timestamp": {
+      "$date": "2014-12-31T23:00:00Z"
+    },
+    "load_mw": 25385.0,
+    "load_forecast_mw": 26118.0,
+    "price_actual_eur_mwh": 65.41,
+    "price_day_ahead_eur_mwh": 50.1,
+    "target_was_missing": false,
+    "weather": [
+      {
+        "city": "Barcelona",
+        "temperature_c": 8.475000000000023,
+        "humidity_pct": 100.0,
+        "pressure_hpa": 1035.0,
+        "wind_speed_ms": 7.0,
+        "cloud_cover_pct": 0.0,
+        "rain_1h_mm": 0.0
+      },
+      {
+        "city": "Bilbao",
+        "temperature_c": -3.492687499999988,
+        "humidity_pct": 97.0,
+        "pressure_hpa": 1036.0,
+        "wind_speed_ms": 0.0,
+        "cloud_cover_pct": 0.0,
+        "rain_1h_mm": 0.0
+      },
+      {
+        "city": "Madrid",
+        "temperature_c": -5.824999999999989,
+        "humidity_pct": 63.0,
+        "pressure_hpa": 971.0,
+        "wind_speed_ms": 1.0,
+        "cloud_cover_pct": 0.0,
+        "rain_1h_mm": 0.0
+      },
+      {
+        "city": "Seville",
+        "temperature_c": 0.22500000000002274,
+        "humidity_pct": 75.0,
+        "pressure_hpa": 1039.0,
+        "wind_speed_ms": 1.0,
+        "cloud_cover_pct": 0.0,
+        "rain_1h_mm": 0.0
+      },
+      {
+        "city": "Valencia",
+        "temperature_c": -2.6749999999999545,
+        "humidity_pct": 77.0,
+        "pressure_hpa": 1001.0,
+        "wind_speed_ms": 1.0,
+        "cloud_cover_pct": 0.0,
+        "rain_1h_mm": 0.0
+      }
+    ],
+    "_id": "2014-12-31T23:00:00Z"
+  },
+  {
+    "timestamp": {
+      "$date": "2018-12-31T22:00:00Z"
+    },
+    "load_mw": 24455.0,
+    "load_forecast_mw": 24424.0,
+    "price_actual_eur_mwh": 69.88,
+    "price_day_ahead_eur_mwh": 64.27,
+    "target_was_missing": false,
+    "weather": [
+      {
+        "city": "Barcelona",
+        "temperature_c": 6.980000000000018,
+        "humidity_pct": 100.0,
+        "pressure_hpa": 1028.0,
+        "wind_speed_ms": 5.0,
+        "cloud_cover_pct": 0.0,
+        "rain_1h_mm": 0.0
+      },
+      {
+        "city": "Bilbao",
+        "temperature_c": 2.4500000000000455,
+        "humidity_pct": 93.0,
+        "pressure_hpa": 1034.0,
+        "wind_speed_ms": 2.0,
+        "cloud_cover_pct": 0.0,
+        "rain_1h_mm": 0.0
+      },
+      {
+        "city": "Madrid",
+        "temperature_c": 2.0,
+        "humidity_pct": 74.0,
+        "pressure_hpa": 1031.0,
+        "wind_speed_ms": 1.0,
+        "cloud_cover_pct": 0.0,
+        "rain_1h_mm": 0.0
+      },
+      {
+        "city": "Seville",
+        "temperature_c": 10.82000000000005,
+        "humidity_pct": 70.0,
+        "pressure_hpa": 1029.0,
+        "wind_speed_ms": 3.0,
+        "cloud_cover_pct": 0.0,
+        "rain_1h_mm": 0.0
+      },
+      {
+        "city": "Valencia",
+        "temperature_c": 5.990000000000009,
+        "humidity_pct": 75.0,
+        "pressure_hpa": 1029.0,
+        "wind_speed_ms": 2.0,
+        "cloud_cover_pct": 0.0,
+        "rain_1h_mm": 0.0
+      }
+    ],
+    "_id": "2018-12-31T22:00:00Z"
+  }
+]

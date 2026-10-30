@@ -1,0 +1,48 @@
+{
+  "$and": [
+    {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "additionalProperties": false,
+        "required": ["_id", "timestamp", "load_mw", "target_was_missing", "weather"],
+        "properties": {
+          "_id": {"bsonType": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:00:00Z$"},
+          "timestamp": {"bsonType": "date"},
+          "load_mw": {"bsonType": ["double", "int", "long"], "minimum": 0, "exclusiveMinimum": true},
+          "load_forecast_mw": {"bsonType": ["double", "int", "long", "null"], "minimum": 0},
+          "price_actual_eur_mwh": {"bsonType": ["double", "int", "long", "null"]},
+          "price_day_ahead_eur_mwh": {"bsonType": ["double", "int", "long", "null"]},
+          "target_was_missing": {"bsonType": "bool"},
+          "weather": {
+            "bsonType": "array",
+            "minItems": 5,
+            "maxItems": 5,
+            "items": {
+              "bsonType": "object",
+              "additionalProperties": false,
+              "required": ["city", "temperature_c", "humidity_pct", "pressure_hpa", "wind_speed_ms", "cloud_cover_pct", "rain_1h_mm"],
+              "properties": {
+                "city": {"enum": ["Barcelona", "Bilbao", "Madrid", "Seville", "Valencia"]},
+                "temperature_c": {"bsonType": ["double", "int", "long"], "minimum": -100, "maximum": 70},
+                "humidity_pct": {"bsonType": ["double", "int", "long"], "minimum": 0, "maximum": 100},
+                "pressure_hpa": {"bsonType": ["double", "int", "long"], "minimum": 900, "maximum": 1100},
+                "wind_speed_ms": {"bsonType": ["double", "int", "long"], "minimum": 0, "maximum": 50},
+                "cloud_cover_pct": {"bsonType": ["double", "int", "long"], "minimum": 0, "maximum": 100},
+                "rain_1h_mm": {"bsonType": ["double", "int", "long"], "minimum": 0}
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "$expr": {
+        "$and": [
+          {"$eq": ["$_id", {"$dateToString": {"date": "$timestamp", "format": "%Y-%m-%dT%H:%M:%SZ", "timezone": "UTC"}}]},
+          {"$eq": [{"$mod": [{"$toLong": "$timestamp"}, 3600000]}, 0]},
+          {"$setEquals": ["$weather.city", ["Barcelona", "Bilbao", "Madrid", "Seville", "Valencia"]]}
+        ]
+      }
+    }
+  ]
+}
