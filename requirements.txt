@@ -5,3 +5,9 @@ jupyter
 joblib
 kagglehub
 scikit-learn==1.9.1
+fastapi
+uvicorn
+pymongo
+dnspython
+pydantic-settings
+httpx
