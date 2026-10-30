@@ -2,7 +2,7 @@
 const fs = require("fs");
 const validator = JSON.parse(fs.readFileSync("mongodb/schema.json", "utf8"));
 const database = db.getSiblingDB(process.env.MONGODB_DATABASE || "energy_pipeline");
-const collectionName = "hourly_records";
+const collectionName = process.env.MONGODB_COLLECTION || "hourly_records";
 const options = { validator, validationLevel: "strict", validationAction: "error" };
 
 if (database.getCollectionNames().includes(collectionName)) {
