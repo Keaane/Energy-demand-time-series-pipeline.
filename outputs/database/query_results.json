@@ -1,0 +1,167 @@
+{
+  "executed_at_utc": "2026-10-30T07:54:02.742221+00:00",
+  "databases": {
+    "sql": {
+      "record_count": 35064,
+      "latest": {
+        "timestamp": "2018-12-31T22:00:00Z",
+        "load_mw": 24455.0,
+        "load_forecast_mw": 24424.0,
+        "price_actual_eur_mwh": 69.88,
+        "price_day_ahead_eur_mwh": 64.27,
+        "target_was_missing": false,
+        "temp_mean_c": 5.648000000000025
+      },
+      "range": {
+        "start": "2018-12-31T18:00:00Z",
+        "end_exclusive": "2018-12-31T22:00:00Z",
+        "records": [
+          {
+            "timestamp": "2018-12-31T18:00:00Z",
+            "load_mw": 30653.0,
+            "load_forecast_mw": 30619.0,
+            "price_actual_eur_mwh": 77.02,
+            "price_day_ahead_eur_mwh": 68.85,
+            "target_was_missing": false,
+            "temp_mean_c": 11.320000000000016
+          },
+          {
+            "timestamp": "2018-12-31T19:00:00Z",
+            "load_mw": 29735.0,
+            "load_forecast_mw": 29932.0,
+            "price_actual_eur_mwh": 76.16,
+            "price_day_ahead_eur_mwh": 68.4,
+            "target_was_missing": false,
+            "temp_mean_c": 9.144000000000016
+          },
+          {
+            "timestamp": "2018-12-31T20:00:00Z",
+            "load_mw": 28071.0,
+            "load_forecast_mw": 27903.0,
+            "price_actual_eur_mwh": 74.3,
+            "price_day_ahead_eur_mwh": 66.88,
+            "target_was_missing": false,
+            "temp_mean_c": 7.700000000000012
+          },
+          {
+            "timestamp": "2018-12-31T21:00:00Z",
+            "load_mw": 25801.0,
+            "load_forecast_mw": 25450.0,
+            "price_actual_eur_mwh": 69.89,
+            "price_day_ahead_eur_mwh": 63.93,
+            "target_was_missing": false,
+            "temp_mean_c": 6.568000000000017
+          }
+        ]
+      },
+      "daily_summary": {
+        "start": "2018-12-29T00:00:00Z",
+        "end_exclusive": "2019-01-01T00:00:00Z",
+        "records": [
+          {
+            "date": "2018-12-29",
+            "count": 24,
+            "avg_load_mw": 26603.958333333332,
+            "min_load_mw": 21084.0,
+            "max_load_mw": 30819.0
+          },
+          {
+            "date": "2018-12-30",
+            "count": 24,
+            "avg_load_mw": 25238.5,
+            "min_load_mw": 20103.0,
+            "max_load_mw": 30229.0
+          },
+          {
+            "date": "2018-12-31",
+            "count": 23,
+            "avg_load_mw": 25966.17391304348,
+            "min_load_mw": 20006.0,
+            "max_load_mw": 30653.0
+          }
+        ]
+      }
+    },
+    "mongo": {
+      "record_count": 35064,
+      "latest": {
+        "timestamp": "2018-12-31T22:00:00Z",
+        "load_mw": 24455.0,
+        "load_forecast_mw": 24424.0,
+        "price_actual_eur_mwh": 69.88,
+        "price_day_ahead_eur_mwh": 64.27,
+        "target_was_missing": false,
+        "temp_mean_c": 5.648000000000025
+      },
+      "range": {
+        "start": "2018-12-31T18:00:00Z",
+        "end_exclusive": "2018-12-31T22:00:00Z",
+        "records": [
+          {
+            "timestamp": "2018-12-31T18:00:00Z",
+            "load_mw": 30653.0,
+            "load_forecast_mw": 30619.0,
+            "price_actual_eur_mwh": 77.02,
+            "price_day_ahead_eur_mwh": 68.85,
+            "target_was_missing": false,
+            "temp_mean_c": 11.320000000000016
+          },
+          {
+            "timestamp": "2018-12-31T19:00:00Z",
+            "load_mw": 29735.0,
+            "load_forecast_mw": 29932.0,
+            "price_actual_eur_mwh": 76.16,
+            "price_day_ahead_eur_mwh": 68.4,
+            "target_was_missing": false,
+            "temp_mean_c": 9.144000000000016
+          },
+          {
+            "timestamp": "2018-12-31T20:00:00Z",
+            "load_mw": 28071.0,
+            "load_forecast_mw": 27903.0,
+            "price_actual_eur_mwh": 74.3,
+            "price_day_ahead_eur_mwh": 66.88,
+            "target_was_missing": false,
+            "temp_mean_c": 7.700000000000012
+          },
+          {
+            "timestamp": "2018-12-31T21:00:00Z",
+            "load_mw": 25801.0,
+            "load_forecast_mw": 25450.0,
+            "price_actual_eur_mwh": 69.89,
+            "price_day_ahead_eur_mwh": 63.93,
+            "target_was_missing": false,
+            "temp_mean_c": 6.568000000000017
+          }
+        ]
+      },
+      "daily_summary": {
+        "start": "2018-12-29T00:00:00Z",
+        "end_exclusive": "2019-01-01T00:00:00Z",
+        "records": [
+          {
+            "count": 24,
+            "avg_load_mw": 26603.958333333332,
+            "min_load_mw": 21084.0,
+            "max_load_mw": 30819.0,
+            "date": "2018-12-29"
+          },
+          {
+            "count": 24,
+            "avg_load_mw": 25238.5,
+            "min_load_mw": 20103.0,
+            "max_load_mw": 30229.0,
+            "date": "2018-12-30"
+          },
+          {
+            "count": 23,
+            "avg_load_mw": 25966.17391304348,
+            "min_load_mw": 20006.0,
+            "max_load_mw": 30653.0,
+            "date": "2018-12-31"
+          }
+        ]
+      }
+    }
+  }
+}
