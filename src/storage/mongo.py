@@ -5,6 +5,7 @@ from collections.abc import Iterable
 from datetime import datetime
 from functools import wraps
 from pathlib import Path
+from typing import cast
 
 from pymongo import ASCENDING, DESCENDING, MongoClient, ReplaceOne, ReturnDocument
 from pymongo.errors import CollectionInvalid, DuplicateKeyError, PyMongoError
@@ -74,7 +75,7 @@ class MongoRepository:
         database: str = "energy_pipeline",
         collection: str = "hourly_records",
     ):
-        self.client = MongoClient(
+        self.client: MongoClient[dict] = MongoClient(
             uri,
             tz_aware=True,
             serverSelectionTimeoutMS=10_000,
@@ -154,7 +155,7 @@ class MongoRepository:
             .skip(offset)
             .limit(limit)
         )
-        return [_record(document) for document in cursor]
+        return [cast(HourlyRecord, _record(document)) for document in cursor]
 
     @_database_operation
     def count(self) -> int:

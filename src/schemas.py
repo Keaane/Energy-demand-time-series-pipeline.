@@ -13,7 +13,10 @@ def utc_hour(value: datetime) -> datetime:
     """Require a timezone and a whole hour, then normalize to UTC."""
     if value.tzinfo is None or value.utcoffset() is None:
         raise ValueError("Timestamp must include a timezone, for example 2018-12-31T22:00:00Z")
-    value = value.astimezone(UTC)
+    try:
+        value = value.astimezone(UTC)
+    except OverflowError:
+        raise ValueError("Timestamp is outside the supported UTC date range") from None
     if value.minute or value.second or value.microsecond:
         raise ValueError("Timestamp must be aligned to a whole UTC hour")
     return value

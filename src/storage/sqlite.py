@@ -126,7 +126,7 @@ class SQLiteRepository:
         rows = list(rows)
         if not rows:
             return []
-        weather = {row["timestamp"]: [] for row in rows}
+        weather: dict[str, list[dict]] = {row["timestamp"]: [] for row in rows}
         # A page may exceed SQLite's bind-parameter limit; use contiguous bounds.
         weather_rows = connection.execute(
             """SELECT w.*, c.name AS city FROM weather_readings AS w
