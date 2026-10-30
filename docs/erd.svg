@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title description">
+  <title id="title">SQLite energy and weather entity relationship diagram</title>
+  <desc id="description">Energy readings are identified by a UTC hour. Each energy reading has five weather readings. Each weather reading references one city. Weather readings use the hour and city identifier as their composite primary key.</desc>
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; fill: #172b3a; }
+    .title { font-size: 25px; font-weight: 700; }
+    .table-title { font-size: 21px; font-weight: 700; fill: white; }
+    .field { font-size: 17px; }
+    .key { font-size: 14px; fill: #415c70; }
+    .note { font-size: 16px; fill: #415c70; }
+    .edge { fill: none; stroke: #526e81; stroke-width: 2; }
+    .box { fill: white; stroke: #9eb4c4; stroke-width: 1.5; }
+  </style>
+  <rect width="1200" height="650" fill="#f7fafc"/>
+  <text x="40" y="42" class="title">Hourly energy and city weather · SQLite</text>
+  <text x="40" y="69" class="note">National demand per UTC hour; five city weather observations per hour</text>
+
+  <rect x="40" y="108" width="450" height="253" rx="8" class="box"/>
+  <path d="M48 108 H482 Q490 108 490 116 V156 H40 V116 Q40 108 48 108" fill="#174e70"/>
+  <text x="60" y="139" class="table-title" style="fill: #fff">energy_readings</text>
+  <text x="60" y="186" class="field">timestamp</text><text x="315" y="186" class="key">TEXT · PK · UTC hour</text>
+  <text x="60" y="217" class="field">load_mw</text><text x="390" y="217" class="key">REAL</text>
+  <text x="60" y="248" class="field">load_forecast_mw</text><text x="390" y="248" class="key">REAL</text>
+  <text x="60" y="279" class="field">price_actual_eur_mwh</text><text x="390" y="279" class="key">REAL</text>
+  <text x="60" y="310" class="field">price_day_ahead_eur_mwh</text><text x="390" y="310" class="key">REAL</text>
+  <text x="60" y="341" class="field">target_was_missing</text><text x="366" y="341" class="key">INTEGER</text>
+
+  <rect x="40" y="422" width="450" height="135" rx="8" class="box"/>
+  <path d="M48 422 H482 Q490 422 490 430 V470 H40 V430 Q40 422 48 422" fill="#174e70"/>
+  <text x="60" y="453" class="table-title" style="fill: #fff">cities</text>
+  <text x="60" y="501" class="field">id</text><text x="345" y="501" class="key">INTEGER · PK</text>
+  <text x="60" y="532" class="field">name</text><text x="365" y="532" class="key">TEXT · UK</text>
+
+  <rect x="700" y="146" width="460" height="365" rx="8" class="box"/>
+  <path d="M708 146 H1152 Q1160 146 1160 154 V194 H700 V154 Q700 146 708 146" fill="#174e70"/>
+  <text x="720" y="177" class="table-title" style="fill: #fff">weather_readings</text>
+  <text x="720" y="226" class="field">timestamp</text><text x="1010" y="226" class="key">TEXT · PK, FK</text>
+  <text x="720" y="260" class="field">city_id</text><text x="982" y="260" class="key">INTEGER · PK, FK</text>
+  <text x="720" y="294" class="field">temperature_c</text><text x="1060" y="294" class="key">REAL</text>
+  <text x="720" y="328" class="field">humidity_pct</text><text x="1060" y="328" class="key">REAL</text>
+  <text x="720" y="362" class="field">pressure_hpa</text><text x="1060" y="362" class="key">REAL</text>
+  <text x="720" y="396" class="field">wind_speed_ms</text><text x="1060" y="396" class="key">REAL</text>
+  <text x="720" y="430" class="field">cloud_cover_pct</text><text x="1060" y="430" class="key">REAL</text>
+  <text x="720" y="464" class="field">rain_1h_mm</text><text x="1060" y="464" class="key">REAL</text>
+  <text x="720" y="494" class="key">Composite primary key: (timestamp, city_id)</text>
+
+  <path d="M490 186 H585 V226 H700" class="edge"/>
+  <path d="M505 178 V194 M514 178 V194 M680 218 L700 226 L680 234 M680 226 H700" class="edge"/>
+  <text x="540" y="169" class="note">1</text>
+  <text x="615" y="211" class="note">5 cities</text>
+  <path d="M490 501 H625 V260 H700" class="edge"/>
+  <path d="M505 493 V509 M514 493 V509 M680 252 L700 260 L680 268 M680 260 H700" class="edge"/>
+  <text x="545" y="488" class="note">1</text>
+  <text x="645" y="294" class="note">0..*</text>
+
+  <text x="40" y="600" class="note">PK = primary key · FK = foreign key · UK = unique key</text>
+  <text x="40" y="627" class="note">Deleting an energy hour cascades to its weather rows. The API requires all five cities in each record.</text>
+</svg>

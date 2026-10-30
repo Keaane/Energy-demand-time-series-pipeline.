@@ -1,0 +1,28 @@
+erDiagram
+    energy_readings ||--|{ weather_readings : "has five city readings"
+    cities ||--o{ weather_readings : "has observations"
+
+    energy_readings {
+        TEXT timestamp PK "UTC hour"
+        REAL load_mw "positive MW"
+        REAL load_forecast_mw "nullable MW"
+        REAL price_actual_eur_mwh "nullable EUR/MWh"
+        REAL price_day_ahead_eur_mwh "nullable EUR/MWh"
+        INTEGER target_was_missing "0 or 1"
+    }
+
+    cities {
+        INTEGER id PK
+        TEXT name UK "one of five Spanish cities"
+    }
+
+    weather_readings {
+        TEXT timestamp PK,FK "energy_readings.timestamp"
+        INTEGER city_id PK,FK "cities.id"
+        REAL temperature_c "Celsius"
+        REAL humidity_pct "0 to 100 percent"
+        REAL pressure_hpa "900 to 1100 hPa"
+        REAL wind_speed_ms "0 to 50 m/s"
+        REAL cloud_cover_pct "0 to 100 percent"
+        REAL rain_1h_mm "nonnegative mm"
+    }

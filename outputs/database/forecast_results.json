@@ -1,0 +1,42 @@
+{
+  "sql": {
+    "historical": {
+      "forecast_timestamp": "2018-12-31T22:00:00Z",
+      "predicted_load_mw": 23920.28823382173,
+      "backend": "sql",
+      "history_hours": 168,
+      "temp_mean_c": 5.648000000000025,
+      "mode": "historical",
+      "actual_load_mw": 24455.0,
+      "absolute_error_mw": 534.7117661782686
+    },
+    "next_hour": {
+      "forecast_timestamp": "2018-12-31T23:00:00Z",
+      "predicted_load_mw": 24632.26442766955,
+      "backend": "sql",
+      "history_hours": 168,
+      "temp_mean_c": 8.5,
+      "mode": "future"
+    }
+  },
+  "mongo": {
+    "historical": {
+      "forecast_timestamp": "2018-12-31T22:00:00Z",
+      "predicted_load_mw": 23920.288233821735,
+      "backend": "mongo",
+      "history_hours": 168,
+      "temp_mean_c": 5.648000000000025,
+      "mode": "historical",
+      "actual_load_mw": 24455.0,
+      "absolute_error_mw": 534.711766178265
+    },
+    "next_hour": {
+      "forecast_timestamp": "2018-12-31T23:00:00Z",
+      "predicted_load_mw": 24632.264427669557,
+      "backend": "mongo",
+      "history_hours": 168,
+      "temp_mean_c": 8.5,
+      "mode": "future"
+    }
+  }
+}
